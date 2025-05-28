@@ -26,6 +26,7 @@ python app.py
 - `add_contact.py` - Functions to add contacts
 - `edit_contact.py` - Functions to edit contacts
 - `printer.py` - Functions to display information on screen
+- `helpers.py` - Helper functions for common operations
 
 ## Contact Structure
 

@@ -1,3 +1,11 @@
+def divider():
+  print('--------------------')
+
+def display_selected_option(option):
+  print('')
+  print(option)
+  divider()
+
 def contact_info(index, contact):
   print(f'Contato #{index}')
   print(f'Nome: {contact["name"]}')
@@ -6,7 +14,7 @@ def contact_info(index, contact):
   print(f'Favorito: {contact["favorite"]}')
   print('---------------------')
 
-def contacts_info(contacts):
+def display_contacts_info(contacts):
   if len(contacts) == 0:
     print('Nenhum contato encontrado')
     return
@@ -16,9 +24,6 @@ def contacts_info(contacts):
   
   for index, contact in enumerate(contacts, start=1):
     contact_info(index, contact)
-
-def divider():
-  print('--------------------')
 
 def press_enter_to_continue():
   input('Pressione enter para continuar')
