@@ -21,3 +21,13 @@ def feedback(message):
   feedback += '\n'
   print(feedback)
   divider()
+
+def all_favorites(contacts):
+  for index, contact in enumerate(contacts, start=1):
+    if contact['favorite']:
+      print(f'Contato #{index}')
+      print(f'Nome: {contact["name"]}')
+      print(f'Telefone: {contact["phone"]}')
+      print(f'Email: {contact["email"]}')
+      print(f'Favorito: {contact["favorite"]}')
+      print('---------------------')

@@ -58,6 +58,12 @@ while True:
 
                 # Wait for user to press enter
                 printer.press_enter_to_continue()
+            elif key == '5':
+                # Show all favorite contacts
+                printer.all_favorites(contacts)
+
+                # Wait for user to press enter
+                printer.press_enter_to_continue()
             elif key == '0':
                 print('Saindo...')
                 exit()
