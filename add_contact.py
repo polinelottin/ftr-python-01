@@ -1,3 +1,5 @@
+from helpers import sanitize_favorite_input
+
 def add_contact():
   name = input('Nome: ')
   phone = input('Telefone: ')
@@ -8,7 +10,7 @@ def add_contact():
     'name': name,
     'phone': phone,
     'email': email,
-    'favorite': True if favorite == 's' else False
+    'favorite': sanitize_favorite_input(favorite)
   }
 
   return contact
