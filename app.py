@@ -31,7 +31,7 @@ while True:
                 printer.press_enter_to_continue()
             elif key == '2':
                 # Show all contacts
-                printer.all(contacts)
+                printer.contacts_info(contacts)
 
                 # Wait for user to press enter
                 printer.press_enter_to_continue()
@@ -60,7 +60,21 @@ while True:
                 printer.press_enter_to_continue()
             elif key == '5':
                 # Show all favorite contacts
-                printer.all_favorites(contacts)
+                favoritos = [c for c in contacts if c["favorite"]]
+
+                printer.contacts_info(favoritos)
+
+                # Wait for user to press enter
+                printer.press_enter_to_continue()
+            elif key == '6':
+                #TODO: Validate if the contact number is a number
+                contact_number_to_remove = int(input('Digite o número do contato que deseja remover: '))
+
+                # Remove contact from contacts list
+                contacts.pop(contact_number_to_remove - 1)
+
+                # Show feedback
+                printer.feedback('Contato removido com sucesso!')
 
                 # Wait for user to press enter
                 printer.press_enter_to_continue()

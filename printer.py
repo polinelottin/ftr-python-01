@@ -1,11 +1,21 @@
-def all(contacts):
+def contact_info(index, contact):
+  print(f'Contato #{index}')
+  print(f'Nome: {contact["name"]}')
+  print(f'Telefone: {contact["phone"]}')
+  print(f'Email: {contact["email"]}')
+  print(f'Favorito: {contact["favorite"]}')
+  print('---------------------')
+
+def contacts_info(contacts):
+  if len(contacts) == 0:
+    print('Nenhum contato encontrado')
+    return
+  
+  print(f'Listando {len(contacts)} contatos')
+  print('--------------------')
+  
   for index, contact in enumerate(contacts, start=1):
-    print(f'Contato #{index}')
-    print(f'Nome: {contact["name"]}')
-    print(f'Telefone: {contact["phone"]}')
-    print(f'Email: {contact["email"]}')
-    print(f'Favorito: {contact["favorite"]}')
-    print('---------------------')
+    contact_info(index, contact)
 
 def divider():
   print('--------------------')
@@ -22,12 +32,3 @@ def feedback(message):
   print(feedback)
   divider()
 
-def all_favorites(contacts):
-  for index, contact in enumerate(contacts, start=1):
-    if contact['favorite']:
-      print(f'Contato #{index}')
-      print(f'Nome: {contact["name"]}')
-      print(f'Telefone: {contact["phone"]}')
-      print(f'Email: {contact["email"]}')
-      print(f'Favorito: {contact["favorite"]}')
-      print('---------------------')
