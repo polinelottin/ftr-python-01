@@ -9,3 +9,15 @@ def all(contacts):
 
 def divider():
   print('--------------------')
+
+def press_enter_to_continue():
+  input('Pressione enter para continuar')
+  divider()
+
+def feedback(message):
+  divider()
+  feedback = '\n'
+  feedback += message
+  feedback += '\n'
+  print(feedback)
+  divider()
