@@ -46,6 +46,18 @@ while True:
 
                 # Wait for user to press enter
                 printer.press_enter_to_continue()
+            elif key == '4':
+                #TODO: Validate if the contact number is a number
+                contact_number_to_favorite = int(input('Digite o número do contato que deseja favoritar/desfavoritar: '))
+
+                previous_favorite_status = contacts[contact_number_to_favorite - 1]['favorite']
+                contacts[contact_number_to_favorite - 1]['favorite'] = not previous_favorite_status
+
+                # Show feedback
+                printer.feedback(f'Contato {"desfavoritado" if previous_favorite_status else "desfavoritado"} com sucesso!')
+
+                # Wait for user to press enter
+                printer.press_enter_to_continue()
             elif key == '0':
                 print('Saindo...')
                 exit()
