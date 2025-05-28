@@ -1,10 +1,10 @@
 import menu
 import add_contact
-import print_contacts
+import printer
 
 contacts = []
 
-print('--------------------')
+printer.divider()
 while True:
     selected_option = menu.show_menu()
 
@@ -13,22 +13,27 @@ while True:
             ## Show selected option
             print('')
             print(value)
-            print('---------------------')
+            printer.divider()
 
             ## Do something
             if key == '1':
                 contact = add_contact.add_contact()
                 contacts.append(contact)
 
-                print('--------------------\n')
-                print('Contato adicionado com sucesso!\n')
-                print('--------------------')
+                printer.divider()
+
+                feedback = '\n'
+                feedback += 'Contato adicionado com sucesso!'
+                feedback += '\n'
+
+                print(feedback)
+                printer.divider()
                 input('Pressione enter para continuar')
-                print('--------------------')
+                printer.divider()
             elif key == '2':
-                print_contacts.all(contacts)
+                printer.all(contacts)
                 input('Pressione enter para continuar')
-                print('--------------------')
+                printer.divider()
             elif key == '0':
                 print('Saindo...')
                 exit()

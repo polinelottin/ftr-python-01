@@ -6,3 +6,6 @@ def all(contacts):
     print(f'Email: {contact["email"]}')
     print(f'Favorito: {contact["favorite"]}')
     print('---------------------')
+
+def divider():
+  print('--------------------')
