@@ -9,8 +9,7 @@ options = (
 )
 
 def show_menu():
-  menu = '---------------------\n'
-  menu += 'O que deseja fazer? \n'
+  menu = 'O que deseja fazer? \n'
   menu += '--------------------\n'
 
   for key, value in options:

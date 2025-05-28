@@ -1,8 +1,10 @@
 import menu
 import add_contact
+import print_contacts
 
 contacts = []
 
+print('--------------------')
 while True:
     selected_option = menu.show_menu()
 
@@ -17,14 +19,19 @@ while True:
             if key == '1':
                 contact = add_contact.add_contact()
                 contacts.append(contact)
-                print('Contato adicionado com sucesso!')
+
+                print('--------------------\n')
+                print('Contato adicionado com sucesso!\n')
+                print('--------------------')
+                input('Pressione enter para continuar')
+                print('--------------------')
             elif key == '2':
-                print(contacts)
+                print_contacts.all(contacts)
+                input('Pressione enter para continuar')
+                print('--------------------')
             elif key == '0':
                 print('Saindo...')
                 exit()
 
             break
-    else:
-        print('Opção inválida')
   
