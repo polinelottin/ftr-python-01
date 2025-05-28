@@ -1,29 +1,18 @@
-options = (
-    ('1', 'Adicionar'),
-    ('2', 'Ver Todos'),
-    ('3', 'Editar'),
-    ('4', 'Favoritar'),
-    ('5', 'Ver Favoritos'),
-    ('6', 'Remover Contato'),
-    ('0', 'Sair')
-)
+import menu
 
-menu = 'O que deseja fazer? \n\n'
-for key, value in options:
-    menu += f'{key} - {value} \n'
+selected_option = menu.show_menu()
 
-selected_option = input(menu)
+for key, value in menu.options:
+  if selected_option == key:
+    # Show next menu
+    print('')
+    print(value)
 
-for key, value in options:
-    if selected_option == key:
-        print('')
-        print(value)
-        break
+    # Do something
+
+    # Show root
+    # selected_option = menu.show_menu()
+    break
 else:
-    print('Sair')
-
-
-
-
-
-
+  print('Sair')
+  
